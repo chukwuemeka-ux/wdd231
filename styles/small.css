@@ -1,0 +1,350 @@
+/* WDD231 Course Home Page
+   Mobile-first styles
+*/
+
+:root {
+    --primary-color: #123b5d;
+    --secondary-color: #1d5d86;
+    --accent-color: #f0b429;
+    --background-color: #f3f6f9;
+    --surface-color: #ffffff;
+    --text-color: #202b35;
+    --muted-color: #526170;
+    --border-color: #cbd5df;
+    --completed-color: #e1f4e8;
+    --completed-border: #247443;
+    --focus-color: #ffbf47;
+
+    --content-width: 1200px;
+    --border-radius: 8px;
+    --shadow: 0 2px 8px rgb(0 0 0 / 10%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--background-color);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--secondary-color);
+}
+
+a:hover {
+    text-decoration-thickness: 2px;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--focus-color);
+    outline-offset: 3px;
+}
+
+/* Header and branding */
+
+.site-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.8rem 1rem;
+    color: #ffffff;
+    background: var(--primary-color);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 0;
+}
+
+.brand img {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+}
+
+.brand span {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* Mobile navigation */
+
+.menu-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    min-height: 44px;
+    padding: 0.4rem;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    color: #ffffff;
+    background: transparent;
+    cursor: pointer;
+}
+
+.menu-icon {
+    font-size: 1.7rem;
+    line-height: 1;
+}
+
+.navigation {
+    grid-column: 1 / -1;
+    display: none;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.navigation.open {
+    display: flex;
+}
+
+.navigation a {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navigation a:hover,
+.navigation a:focus-visible {
+    color: var(--primary-color);
+    background: #ffffff;
+}
+
+.navigation a.active {
+    color: var(--primary-color);
+    background: var(--accent-color);
+    font-weight: 700;
+}
+
+/* Main content */
+
+.page-container {
+    width: min(100% - 2rem, var(--content-width));
+    margin: 0 auto;
+    padding: 1.25rem 0 2rem;
+}
+
+h1 {
+    margin: 0 0 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--accent-color);
+    color: var(--primary-color);
+    font-size: clamp(1.8rem, 5vw, 2.4rem);
+    line-height: 1.25;
+}
+
+h2 {
+    margin: 0;
+    padding: 0.8rem 1rem;
+    color: #ffffff;
+    background: var(--primary-color);
+    font-size: 1.15rem;
+    line-height: 1.4;
+}
+
+p {
+    margin-top: 0;
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+}
+
+.panel {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background: var(--surface-color);
+    box-shadow: var(--shadow);
+}
+
+.panel-content {
+    padding: 1rem;
+}
+
+.panel-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Course filters */
+
+.course-filters {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+    padding: 1rem 1rem 0;
+}
+
+.filter-button {
+    min-height: 44px;
+    padding: 0.65rem 0.9rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    color: var(--primary-color);
+    background: #ffffff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.filter-button:hover {
+    color: #ffffff;
+    background: var(--secondary-color);
+}
+
+.filter-button.active {
+    color: #ffffff;
+    background: var(--primary-color);
+}
+
+.course-count {
+    margin: 0;
+    padding: 0.8rem 1rem 0;
+    color: var(--muted-color);
+    font-size: 0.95rem;
+}
+
+/* Course cards */
+
+.course-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.75rem;
+    padding: 1rem;
+}
+
+.course-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    min-width: 0;
+    padding: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    background: #ffffff;
+}
+
+.course-card h3 {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 1rem;
+    overflow-wrap: anywhere;
+}
+
+.course-card p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.course-card.completed {
+    border-color: var(--completed-border);
+    background: var(--completed-color);
+}
+
+.course-card.completed h3 {
+    color: #174d2b;
+}
+
+.course-status {
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+    color: #ffffff;
+    background: #465463;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.course-card.completed .course-status {
+    color: #ffffff;
+    background: #1c6237;
+}
+
+.credits {
+    margin: 0 1rem;
+    padding: 0.8rem 0;
+    border-top: 2px solid var(--border-color);
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.course-note {
+    margin: 0;
+    padding: 0 1rem 1rem;
+    color: var(--muted-color);
+    font-size: 0.9rem;
+}
+
+/* Footer */
+
+.site-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.5rem 1rem;
+    color: #ffffff;
+    background: var(--primary-color);
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-links a {
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+    background: #ffffff;
+}
+
+.copyright p,
+.modified {
+    margin: 0;
+}
+
+.modified {
+    font-size: 0.9rem;
+    overflow-wrap: anywhere;
+}
