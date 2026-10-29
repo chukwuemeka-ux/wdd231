@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the Aba Chamber of Commerce member directory and connect with local businesses in Aba, Abia State, Nigeria.">
+  <meta name="author" content="Chukwuemeka Okpara Sunday">
+  <meta property="og:title" content="Aba Chamber of Commerce | Member Directory">
+  <meta property="og:description" content="Discover local businesses and services in Aba, Abia State, Nigeria.">
+  <meta property="og:image" content="https://chukwuemeka-ux.github.io/wdd231/chamber/images/chamber-logo.svg">
+  <meta property="og:url" content="https://chukwuemeka-ux.github.io/wdd231/chamber/directory.html">
+  <meta property="og:type" content="website">
+  <title>Member Directory | Aba Chamber of Commerce</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <script src="scripts/directory.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="brand">
+      <img src="images/chamber-logo.svg" alt="" width="52" height="52">
+      <div><p class="brand-name">Aba Chamber of Commerce</p><p class="brand-tagline">Connect • Collaborate • Grow</p></div>
+    </div>
+    <button id="menu-button" class="menu-button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">☰</button>
+    <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="directory.html" aria-current="page">Directory</a>
+      <a href="join.html">Join</a>
+      <a href="discover.html">Discover</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="page-heading">
+      <p class="eyebrow">Local businesses. Shared progress.</p>
+      <h1>Member Directory</h1>
+      <p>Find businesses and services serving Aba and the wider Abia State community.</p>
+    </section>
+
+    <section class="directory-tools" aria-label="Directory display options">
+      <p id="member-count" class="member-count" aria-live="polite">Loading members…</p>
+      <div class="view-buttons" role="group" aria-label="Choose directory layout">
+        <button id="grid-view" class="view-button active" type="button" aria-pressed="true">▦ Grid View</button>
+        <button id="list-view" class="view-button" type="button" aria-pressed="false">☷ List View</button>
+      </div>
+    </section>
+
+    <section id="members-container" class="members-grid" aria-label="Chamber members">
+      <p class="loading-message">Loading member directory…</p>
+    </section>
+    <noscript><p class="notice">Please enable JavaScript to view the chamber directory.</p></noscript>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-contact">
+      <h2>Aba Chamber of Commerce</h2>
+      <p>Aba, Abia State, Nigeria</p>
+      <p>Email: info@abachamber.example</p>
+      <p>Phone: +234 803 000 0000</p>
+    </div>
+    <div class="footer-development">
+      <p>&copy; <span id="current-year"></span> Chukwuemeka Okpara Sunday</p>
+      <p>WDD 231 — Web Frontend Development I</p>
+      <p>Last modified: <span id="last-modified"></span></p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,22 @@
+/* Wider-screen layout enhancements */
+@media (min-width: 760px) {
+  .site-header { padding: .8rem max(1.5rem, calc((100% - 1180px) / 2)); flex-wrap: nowrap; }
+  .brand-name { font-size: 1.25rem; }
+  .menu-button { display: none; }
+  .primary-nav, .primary-nav.open { display: flex; flex-basis: auto; flex-direction: row; align-items: center; gap: .25rem; }
+  .primary-nav a { padding: .75rem .9rem; }
+  main { width: min(100% - 3rem, 1180px); }
+  .page-heading { padding-top: 3rem; }
+  .members-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
+  .member-details { padding: 1.15rem; }
+  .members-list .member-details { grid-template-columns: minmax(180px, 1.3fr) minmax(130px, 1fr) minmax(150px, 1.2fr) auto; align-items: center; gap: .5rem 1rem; }
+  .members-list .member-details h2 { grid-column: 1; }
+  .members-list .member-category { grid-column: 2; }
+  .members-list .member-details > p { grid-column: 3; }
+  .members-list .member-details > a, .members-list .membership-level { grid-column: 4; }
+  .site-footer { grid-template-columns: 1fr 1fr; align-items: start; padding-top: 2rem; padding-bottom: 2rem; }
+  .footer-development { border-top: 0; border-left: 1px solid #54716d; padding: .1rem 0 .1rem 1.5rem; }
+}
+@media (min-width: 1100px) {
+  .members-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
