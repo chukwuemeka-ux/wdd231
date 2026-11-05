@@ -2,8 +2,6 @@ const membersContainer = document.querySelector("#members-container");
 const memberCount = document.querySelector("#member-count");
 const gridButton = document.querySelector("#grid-view");
 const listButton = document.querySelector("#list-view");
-const menuButton = document.querySelector("#menu-button");
-const primaryNav = document.querySelector("#primary-nav");
 
 function membershipName(level) {
   if (Number(level) === 3) return "Gold Member";
@@ -87,17 +85,5 @@ function setView(view) {
 
 gridButton.addEventListener("click", () => setView("grid"));
 listButton.addEventListener("click", () => setView("list"));
-
-menuButton.addEventListener("click", () => {
-  const isOpen = primaryNav.classList.toggle("open");
-  menuButton.setAttribute("aria-expanded", String(isOpen));
-  menuButton.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
-  menuButton.textContent = isOpen ? "✕" : "☰";
-});
-
-document.querySelector("#current-year").textContent = new Date().getFullYear();
-document.querySelector("#last-modified").textContent = document.lastModified
-  ? new Date(document.lastModified).toLocaleString()
-  : "Unavailable";
 
 getMembers();

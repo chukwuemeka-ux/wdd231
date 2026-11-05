@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Warri Chamber of Commerce connects businesses, promotes economic growth, and supports the local community.">
+    <meta name="author" content="Chukwuemeka Okpara Sunday">
+    <title>Warri Chamber of Commerce | Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a class="brand" href="index.html" aria-label="Warri Chamber of Commerce home">
+                <span class="brand-mark">WC</span>
+                <span><strong>Warri</strong><br>Chamber of Commerce</span>
+            </a>
+            <button id="menu-button" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+        </div>
+        <nav id="navigation">
+            <a class="active" href="index.html">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="discover.html">Discover</a>
+            <a href="join.html">Join</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Warri Chamber of Commerce</h1>
+
+        <section class="hero" aria-labelledby="hero-heading">
+            <img src="images/warri-hero.svg" alt="Illustration of Warri's business community and waterfront" width="1200" height="600">
+            <div class="hero-content">
+                <h2 id="hero-heading">Growing Business. Building Community.</h2>
+                <p>Connect with opportunities, local businesses, and community leaders in Warri.</p>
+                <a class="cta-button" href="join.html">Join the Chamber</a>
+            </div>
+        </section>
+
+        <div class="home-grid">
+            <section class="card events">
+                <h2>Current Events</h2>
+                <div class="card-body">
+                    <article>
+                        <h3>Business Networking Forum</h3>
+                        <p>Meet local entrepreneurs, exchange ideas, and discover new opportunities for collaboration.</p>
+                    </article>
+                    <article>
+                        <h3>Small Business Growth Workshop</h3>
+                        <p>Join our practical workshop on customer service, digital marketing, and sustainable business growth.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="card weather">
+                <h2>Weather in Warri</h2>
+                <div class="card-body">
+                    <p class="temperature"><span id="weather-icon" aria-hidden="true">☀️</span> <span id="current-temp">Loading...</span></p>
+                    <p id="weather-description">Loading current weather...</p>
+                    <h3>3-Day Forecast</h3>
+                    <div id="forecast" class="forecast">
+                        <p>Loading forecast...</p>
+                    </div>
+                    <p class="weather-note" id="weather-status"></p>
+                </div>
+            </section>
+        </div>
+
+        <section class="spotlight-section">
+            <h2>Member Spotlights</h2>
+            <p class="section-intro">Meet some of the Gold and Silver members helping our business community grow.</p>
+            <div id="spotlights" class="spotlights">
+                <p>Loading member spotlights...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <strong>Warri Chamber of Commerce</strong>
+            <p>Warri, Delta State, Nigeria</p>
+            <p>Supporting local business and economic growth.</p>
+        </div>
+        <div>
+            <p>&copy; <span id="currentyear"></span> Warri Chamber of Commerce</p>
+            <p>Chukwuemeka Okpara Sunday | WDD 231</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
+</body>
+</html>

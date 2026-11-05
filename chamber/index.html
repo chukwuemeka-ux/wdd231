@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aba Chamber of Commerce connects local businesses, promotes economic growth, and supports the Aba community.">
+  <meta name="author" content="Chukwuemeka Okpara Sunday">
+  <meta property="og:title" content="Aba Chamber of Commerce | Home">
+  <meta property="og:description" content="Connect, collaborate, and grow with the Aba business community.">
+  <meta property="og:image" content="https://chukwuemeka-ux.github.io/wdd231/chamber/images/chamber-logo.svg">
+  <meta property="og:url" content="https://chukwuemeka-ux.github.io/wdd231/chamber/">
+  <meta property="og:type" content="website">
+  <title>Aba Chamber of Commerce | Home</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/weather.js" defer></script>
+  <script src="scripts/spotlight.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Aba Chamber of Commerce home">
+      <img src="images/chamber-logo.svg" alt="" width="52" height="52">
+      <span><span class="brand-name">Aba Chamber of Commerce</span><span class="brand-tagline">Connect • Collaborate • Grow</span></span>
+    </a>
+    <button id="menu-button" class="menu-button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">☰</button>
+    <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="directory.html">Directory</a>
+      <a href="join.html">Join</a>
+      <a href="discover.html">Discover</a>
+    </nav>
+  </header>
+  <main id="main-content">
+    <h1 class="visually-hidden">Aba Chamber of Commerce</h1>
+    <section class="hero" aria-labelledby="hero-heading">
+      <img src="images/aba-hero.svg" alt="Stylized illustration representing businesses and commerce in Aba, Abia State" width="1200" height="600">
+      <div class="hero-content">
+        <h2 id="hero-heading">Growing Business. Building Community.</h2>
+        <p>Connect with local businesses, discover opportunities, and help Aba's economy grow.</p>
+        <a class="cta-button" href="join.html">Join the Chamber</a>
+      </div>
+    </section>
+    <div class="home-grid">
+      <section class="card events">
+        <h2>Current Events</h2>
+        <div class="card-body">
+          <article><h3>Business Networking Forum</h3><p>Meet local entrepreneurs, exchange ideas, and discover opportunities for collaboration.</p></article>
+          <article><h3>Small Business Growth Workshop</h3><p>Join a practical workshop on customer service, digital marketing, and sustainable growth.</p></article>
+        </div>
+      </section>
+      <section class="card weather">
+        <h2>Weather in Aba</h2>
+        <div class="card-body">
+          <p class="temperature"><span id="weather-icon" aria-hidden="true">☀️</span> <span id="current-temp">Loading...</span></p>
+          <p id="weather-description">Loading current weather...</p>
+          <h3>3-Day Forecast</h3><div id="forecast" class="forecast"><p>Loading forecast...</p></div>
+          <p class="weather-note" id="weather-status" aria-live="polite"></p>
+        </div>
+      </section>
+    </div>
+    <section class="spotlight-section" aria-labelledby="spotlight-heading">
+      <h2 id="spotlight-heading">Member Spotlights</h2>
+      <p class="section-intro">Meet some of our Gold and Silver members.</p>
+      <div id="spotlights" class="spotlights"><p>Loading member spotlights...</p></div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-contact"><h2>Aba Chamber of Commerce</h2><p>Aba, Abia State, Nigeria</p><p>Email: info@abachamber.example</p><p>Phone: +234 803 000 0000</p></div>
+    <div class="footer-development"><p>&copy; <span id="current-year"></span> Chukwuemeka Okpara Sunday</p><p>WDD 231 — Web Frontend Development I</p><p>Last modified: <span id="last-modified"></span></p></div>
+  </footer>
+</body></html>

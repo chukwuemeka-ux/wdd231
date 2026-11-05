@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Aba Electrical Solutions",
+    "address": "14 Asa Road, Aba, Abia State, Nigeria",
+    "phone": "+234 803 111 2201",
+    "website": "https://example.com/aba-electrical",
+    "image": "aba-electrical.svg",
+    "membershipLevel": 3,
+    "category": "Electrical Services",
+    "description": "Electrical installation, maintenance, and commercial power solutions."
+  },
+  {
+    "name": "Eastern Motors & Logistics",
+    "address": "22 Ikot Ekpene Road, Aba, Abia State, Nigeria",
+    "phone": "+234 806 222 3102",
+    "website": "https://example.com/eastern-motors",
+    "image": "eastern-motors.svg",
+    "membershipLevel": 2,
+    "category": "Transport & Logistics",
+    "description": "Vehicle services and dependable local logistics support."
+  },
+  {
+    "name": "Abia Furniture Works",
+    "address": "8 Factory Road, Aba, Abia State, Nigeria",
+    "phone": "+234 809 333 4203",
+    "website": "https://example.com/abia-furniture",
+    "image": "abia-furniture.svg",
+    "membershipLevel": 1,
+    "category": "Manufacturing",
+    "description": "Custom furniture and interior fittings for homes and offices."
+  },
+  {
+    "name": "Golden Crust Bakery",
+    "address": "31 Ehi Road, Aba, Abia State, Nigeria",
+    "phone": "+234 802 444 5304",
+    "website": "https://example.com/golden-crust",
+    "image": "golden-bakery.svg",
+    "membershipLevel": 2,
+    "category": "Food & Hospitality",
+    "description": "Fresh bread, pastries, cakes, and event orders."
+  },
+  {
+    "name": "Motherland Solar & Electrical",
+    "address": "5 Ngwa Road, Aba, Abia State, Nigeria",
+    "phone": "+234 805 555 6405",
+    "website": "https://example.com/motherland-solar",
+    "image": "motherland-solar.svg",
+    "membershipLevel": 3,
+    "category": "Solar Energy",
+    "description": "Solar PV installation, inverter systems, CCTV, and maintenance."
+  },
+  {
+    "name": "Heritage Garden Hotel",
+    "address": "17 Ohanku Road, Aba, Abia State, Nigeria",
+    "phone": "+234 807 666 7506",
+    "website": "https://example.com/heritage-hotel",
+    "image": "heritage-hotel.svg",
+    "membershipLevel": 1,
+    "category": "Hospitality",
+    "description": "Guest accommodation, meeting spaces, and event services."
+  },
+  {
+    "name": "Aba Digital Hub",
+    "address": "40 Azikiwe Road, Aba, Abia State, Nigeria",
+    "phone": "+234 808 777 8607",
+    "website": "https://example.com/aba-digital",
+    "image": "aba-digital.svg",
+    "membershipLevel": 2,
+    "category": "Technology",
+    "description": "Digital services, computer support, and small-business technology."
+  }
+]
