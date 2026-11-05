@@ -1,1 +1,253 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Join the Aba Chamber of Commerce."><meta name="author" content="Chukwuemeka Okpara Sunday"><title>Join | Aba Chamber of Commerce</title><link rel="icon" href="images/favicon.svg"><link rel="stylesheet" href="styles/normalize.css"><link rel="stylesheet" href="styles/small.css"><link rel="stylesheet" href="styles/large.css"><script src="scripts/navigation.js" defer></script></head><body><header class="site-header"><a class="brand" href="index.html"><img src="images/chamber-logo.svg" alt="" width="52" height="52"><span><span class="brand-name">Aba Chamber of Commerce</span><span class="brand-tagline">Connect • Collaborate • Grow</span></span></a><button id="menu-button" class="menu-button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">☰</button><nav id="primary-nav" class="primary-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="directory.html">Directory</a><a href="join.html" aria-current="page">Join</a><a href="discover.html">Discover</a></nav></header><main><section class="page-heading"><h1>Join the Chamber</h1><p>Membership information and the application form will be added in a future project week.</p></section></main></body></html>
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Apply to join the Aba Chamber of Commerce and connect with local businesses.">
+    <meta name="author" content="Chukwuemeka Okpara Sunday">
+
+    <meta property="og:title" content="Join Aba Chamber of Commerce">
+    <meta property="og:description" content="Apply for membership with the Aba Chamber of Commerce.">
+    <meta property="og:image" content="images/aba-hero.svg">
+    <meta property="og:url" content="https://chukwuemeka-ux.github.io/wdd231/chamber/join.html">
+
+    <title>Join | Aba Chamber of Commerce</title>
+
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="brand">
+            <span class="brand-mark">ACC</span>
+            <div>
+                <div class="brand-name">Aba Chamber of Commerce</div>
+                <div class="brand-tagline">Connecting Business & Community</div>
+            </div>
+        </div>
+
+        <button class="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="primary-nav">
+            <a href="index.html">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="discover.html">Discover</a>
+            <a href="join.html" aria-current="page">Join</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <section class="page-heading">
+            <p class="eyebrow">Membership Application</p>
+            <h1>Join the Aba Chamber of Commerce</h1>
+            <p>
+                Grow your business, connect with other professionals, and
+                discover new opportunities in our community.
+            </p>
+        </section>
+
+        <section class="join-layout">
+
+            <!-- Membership Form -->
+            <form method="get" action="thankyou.html" class="join-form">
+
+                <label>
+                    First Name *
+                    <input type="text" name="first" title="Enter your first name" autocomplete="given-name" required>
+                </label>
+
+                <label>
+                    Last Name *
+                    <input type="text" name="last" title="Enter your last name" autocomplete="family-name" required>
+                </label>
+
+                <label>
+                    Organizational Title
+                    <input type="text" name="title" title="Enter your organizational title"
+                        autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}" placeholder="e.g. General Manager">
+                </label>
+
+                <label>
+                    Email Address *
+                    <input type="email" name="email" title="Enter your email address" autocomplete="email"
+                        placeholder="name@example.com" required>
+                </label>
+
+                <label>
+                    Mobile Phone Number *
+                    <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required>
+                </label>
+
+                <label>
+                    Business / Organization Name *
+                    <input type="text" name="organization" title="Enter your organization name"
+                        autocomplete="organization" required>
+                </label>
+
+                <fieldset>
+                    <legend>Select Membership Level</legend>
+
+                    <label>
+                        <input type="radio" name="membership" value="np" checked>
+                        NP Membership – Free for non-profit organizations
+                    </label>
+
+                    <label>
+                        <input type="radio" name="membership" value="bronze">
+                        Bronze Membership
+                    </label>
+
+                    <label>
+                        <input type="radio" name="membership" value="silver">
+                        Silver Membership
+                    </label>
+
+                    <label>
+                        <input type="radio" name="membership" value="gold">
+                        Gold Membership
+                    </label>
+                </fieldset>
+
+                <label>
+                    Business Description
+                    <textarea name="description" title="Describe your business or organization" rows="5"></textarea>
+                </label>
+
+                <!-- Hidden timestamp -->
+                <input type="hidden" id="timestamp" name="timestamp">
+
+                <input type="submit" value="Submit Membership Application">
+
+            </form>
+
+            <!-- Membership Level Cards -->
+            <section class="membership-section" aria-labelledby="membership-heading">
+
+                <h2 id="membership-heading">Membership Levels</h2>
+
+                <div class="membership-cards">
+
+                    <article class="membership-card np-card">
+                        <h3>NP Membership</h3>
+                        <p>Free membership for qualifying non-profit organizations.</p>
+                        <button type="button" data-modal="np-modal">
+                            Learn More
+                        </button>
+                    </article>
+
+                    <article class="membership-card bronze-card">
+                        <h3>Bronze Membership</h3>
+                        <p>A great starting point for growing local businesses.</p>
+                        <button type="button" data-modal="bronze-modal">
+                            Learn More
+                        </button>
+                    </article>
+
+                    <article class="membership-card silver-card">
+                        <h3>Silver Membership</h3>
+                        <p>More visibility, training, and networking opportunities.</p>
+                        <button type="button" data-modal="silver-modal">
+                            Learn More
+                        </button>
+                    </article>
+
+                    <article class="membership-card gold-card">
+                        <h3>Gold Membership</h3>
+                        <p>Premium benefits for businesses seeking maximum exposure.</p>
+                        <button type="button" data-modal="gold-modal">
+                            Learn More
+                        </button>
+                    </article>
+
+                </div>
+            </section>
+
+        </section>
+
+    </main>
+
+    <!-- NP Modal -->
+    <dialog id="np-modal">
+        <button class="close-modal" aria-label="Close NP membership information">✕</button>
+        <h2>NP Membership</h2>
+        <p><strong>Cost:</strong> Free</p>
+        <ul>
+            <li>Directory listing</li>
+            <li>Access to selected chamber events</li>
+            <li>Community networking opportunities</li>
+        </ul>
+    </dialog>
+
+    <!-- Bronze Modal -->
+    <dialog id="bronze-modal">
+        <button class="close-modal" aria-label="Close Bronze membership information">✕</button>
+        <h2>Bronze Membership</h2>
+        <p><strong>Benefits include:</strong></p>
+        <ul>
+            <li>Business directory listing</li>
+            <li>Networking event access</li>
+            <li>Member newsletters and resources</li>
+        </ul>
+    </dialog>
+
+    <!-- Silver Modal -->
+    <dialog id="silver-modal">
+        <button class="close-modal" aria-label="Close Silver membership information">✕</button>
+        <h2>Silver Membership</h2>
+        <p><strong>Benefits include:</strong></p>
+        <ul>
+            <li>All Bronze benefits</li>
+            <li>Professional business training</li>
+            <li>Discounted event registration</li>
+            <li>Enhanced business visibility</li>
+        </ul>
+    </dialog>
+
+    <!-- Gold Modal -->
+    <dialog id="gold-modal">
+        <button class="close-modal" aria-label="Close Gold membership information">✕</button>
+        <h2>Gold Membership</h2>
+        <p><strong>Benefits include:</strong></p>
+        <ul>
+            <li>All Silver benefits</li>
+            <li>Featured business spotlight opportunities</li>
+            <li>Premium advertising opportunities</li>
+            <li>Priority sponsorship opportunities</li>
+        </ul>
+    </dialog>
+
+    <footer class="site-footer">
+
+        <section>
+            <h2>Aba Chamber of Commerce</h2>
+            <p>Aba, Abia State, Nigeria</p>
+            <p>info@abachamber.example</p>
+            <p>+234 800 000 0000</p>
+        </section>
+
+        <section class="footer-development">
+            <p>&copy; <span id="currentyear"></span> Aba Chamber of Commerce</p>
+            <p>Chukwuemeka Okpara Sunday | WDD 231</p>
+            <p id="lastModified"></p>
+        </section>
+
+    </footer>
+
+</body>
+
+</html>
