@@ -1,23 +1,28 @@
-// Set the timestamp when the join form page loads
+// Set the date and time when the form loads
 const timestamp = document.querySelector("#timestamp");
 
 if (timestamp) {
     timestamp.value = new Date().toISOString();
 }
 
-// Membership modal functionality
+
+// Open membership information modals
 const modalButtons = document.querySelectorAll("[data-modal]");
-const closeButtons = document.querySelectorAll(".close-modal");
 
 modalButtons.forEach((button) => {
     button.addEventListener("click", () => {
-        const modal = document.querySelector(`#${button.dataset.modal}`);
+        const modalId = button.dataset.modal;
+        const modal = document.querySelector(`#${modalId}`);
 
         if (modal) {
             modal.showModal();
         }
     });
 });
+
+
+// Close membership modals
+const closeButtons = document.querySelectorAll(".close-modal");
 
 closeButtons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -29,43 +34,22 @@ closeButtons.forEach((button) => {
     });
 });
 
-// Close a modal when clicking outside its content
-document.querySelectorAll("dialog").forEach((modal) => {
-    modal.addEventListener("click", (event) => {
-        if (event.target === modal) {
-            modal.close();
+
+// Allow users to close a modal by clicking outside it
+const dialogs = document.querySelectorAll("dialog");
+
+dialogs.forEach((dialog) => {
+    dialog.addEventListener("click", (event) => {
+        const dialogDimensions = dialog.getBoundingClientRect();
+
+        const clickedOutside =
+            event.clientX < dialogDimensions.left ||
+            event.clientX > dialogDimensions.right ||
+            event.clientY < dialogDimensions.top ||
+            event.clientY > dialogDimensions.bottom;
+
+        if (clickedOutside) {
+            dialog.close();
         }
     });
 });
-
-// Display submitted form information on thankyou.html
-const params = new URLSearchParams(window.location.search);
-
-if (document.querySelector("#firstName")) {
-    document.querySelector("#firstName").textContent =
-        params.get("first") || "Not provided";
-
-    document.querySelector("#lastName").textContent =
-        params.get("last") || "Not provided";
-
-    document.querySelector("#email").textContent =
-        params.get("email") || "Not provided";
-
-    document.querySelector("#phone").textContent =
-        params.get("phone") || "Not provided";
-
-    document.querySelector("#organization").textContent =
-        params.get("organization") || "Not provided";
-
-    const submittedTimestamp = params.get("timestamp");
-
-    if (submittedTimestamp) {
-        const date = new Date(submittedTimestamp);
-
-        document.querySelector("#submittedDate").textContent =
-            date.toLocaleString();
-    } else {
-        document.querySelector("#submittedDate").textContent =
-            "Not available";
-    }
-}

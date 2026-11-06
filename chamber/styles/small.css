@@ -630,100 +630,129 @@ footer p {
 .spotlight-card img { width:auto; height:80px; max-width:130px; margin:0 auto .7rem; object-fit:contain; }
 .spotlight-card h3 { margin:.4rem 0; }
 .spotlight-card a { font-weight:700; }
-/* ========================================
-   WEEK 4 - CHAMBER JOIN PAGE
-   ======================================== */
 
+/* Join page layout */
 .join-layout {
   display: grid;
+  grid-template-columns: 1fr;
   gap: 2rem;
-  padding-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
+/* Membership application form */
 .join-form {
-  background: var(--surface, white);
-  border: 1px solid var(--border);
-  border-radius: 0.65rem;
-  padding: 1.25rem;
-  box-shadow: var(--shadow);
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border: 1px solid #d0d7d6;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .join-form label {
   display: block;
-  font-weight: 700;
   margin-bottom: 1rem;
+  font-weight: 600;
+  color: #052d46;
 }
 
-.join-form input,
-.join-form textarea,
-.join-form select {
-  width: 100%;
+.join-form input[type="text"],
+.join-form input[type="email"],
+.join-form input[type="tel"],
+.join-form textarea {
   display: block;
-  margin-top: 0.35rem;
-  padding: 0.7rem;
-  border: 1px solid var(--border);
-  border-radius: 0.35rem;
-  font: inherit;
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 0.75rem;
+  border: 1px solid #9aa8a6;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
 }
 
+.join-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Form focus for accessibility */
 .join-form input:focus,
 .join-form textarea:focus {
-  outline: 3px solid var(--accent);
+  outline: 3px solid #8fc7bd;
   outline-offset: 2px;
+  border-color: #052d46;
 }
 
+/* Membership selection */
 .join-form fieldset {
-  border: 1px solid var(--border);
-  border-radius: 0.4rem;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
   padding: 1rem;
+  border: 1px solid #9aa8a6;
+  border-radius: 5px;
+}
+
+.join-form legend {
+  padding: 0 0.5rem;
+  font-weight: 700;
+  color: #052d46;
 }
 
 .join-form fieldset label {
-  font-weight: 400;
-  margin: 0.6rem 0;
   display: flex;
-  gap: 0.6rem;
   align-items: center;
+  gap: 0.6rem;
+  margin: 0.8rem 0;
+  font-weight: 400;
 }
 
-.join-form fieldset input {
+.join-form input[type="radio"] {
   width: auto;
-  margin: 0;
 }
 
+/* Submit button */
 .join-form input[type="submit"] {
-  background: var(--brand, #0f766e);
-  color: white;
+  width: 100%;
+  padding: 0.9rem 1.2rem;
   border: none;
-  cursor: pointer;
+  border-radius: 5px;
+  background-color: #052d46;
+  color: #ffffff;
+  font-size: 1rem;
   font-weight: 700;
+  cursor: pointer;
 }
 
-.join-form input[type="submit"]:hover {
-  background: var(--brand-dark, #073b5c);
+.join-form input[type="submit"]:hover,
+.join-form input[type="submit"]:focus {
+  background-color: #07486d;
+}
+
+/* Membership section */
+.membership-section {
+  padding: 1rem 0;
+}
+
+.membership-section h2 {
+  color: #052d46;
+  margin-bottom: 1rem;
 }
 
 /* Membership cards */
-
-.membership-section h2 {
-  margin-top: 0;
-}
-
 .membership-cards {
   display: grid;
+  grid-template-columns: 1fr;
   gap: 1rem;
 }
 
 .membership-card {
-  background: white;
-  border: 1px solid var(--border);
-  border-left: 6px solid var(--brand, #0f766e);
-  border-radius: 0.5rem;
-  padding: 1rem;
-  box-shadow: var(--shadow);
-  opacity: 0;
-  animation: cardEntrance 0.7s ease-out forwards;
+  padding: 1.25rem;
+  border: 1px solid #d0d7d6;
+  border-left: 5px solid #052d46;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+  /* Week 4 animation */
+  animation: membershipAppear 0.7s ease-out both;
 }
 
 .membership-card:nth-child(1) {
@@ -742,7 +771,49 @@ footer p {
   animation-delay: 0.55s;
 }
 
-@keyframes cardEntrance {
+.membership-card h3 {
+  margin-top: 0;
+  color: #052d46;
+}
+
+.membership-card p {
+  margin-bottom: 1rem;
+}
+
+.membership-card button {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #052d46;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.membership-card button:hover,
+.membership-card button:focus {
+  background-color: #07486d;
+}
+
+/* Membership card colors */
+.np-card {
+  border-left-color: #54716d;
+}
+
+.bronze-card {
+  border-left-color: #8b5a2b;
+}
+
+.silver-card {
+  border-left-color: #6c757d;
+}
+
+.gold-card {
+  border-left-color: #b8860b;
+}
+
+/* Animation when the page loads */
+@keyframes membershipAppear {
   from {
     opacity: 0;
     transform: translateY(25px);
@@ -754,58 +825,51 @@ footer p {
   }
 }
 
-.membership-card h3 {
-  color: var(--brand-dark, #073b5c);
-  margin-top: 0;
-}
-
-.membership-card button {
-  background: transparent;
-  color: var(--brand, #0f766e);
-  border: 1px solid var(--brand, #0f766e);
-  border-radius: 0.3rem;
-  padding: 0.5rem 0.8rem;
-  font: inherit;
-  font-weight: 700;
-  cursor: pointer;
-}
-
 /* Modal styling */
-
 dialog {
-  max-width: min(90%, 550px);
+  width: min(90%, 550px);
   border: none;
-  border-radius: 0.6rem;
-  padding: 1.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+  border-radius: 8px;
+  padding: 2rem;
+  color: #1f2933;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 dialog::backdrop {
-  background: rgba(0, 0, 0, .55);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+dialog h2 {
+  margin-top: 0;
+  color: #052d46;
 }
 
 .close-modal {
   float: right;
   border: none;
-  background: var(--brand-dark, #073b5c);
-  color: white;
-  border-radius: 0.25rem;
-  padding: 0.3rem 0.55rem;
+  background: transparent;
+  font-size: 1.4rem;
   cursor: pointer;
+  color: #052d46;
 }
 
 /* Thank You page */
-
 .thankyou-section {
-  max-width: 750px;
+  max-width: 700px;
   margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #d0d7d6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-.application-details {
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 0.6rem;
-  padding: 1.25rem;
-  margin: 1.5rem 0;
-  box-shadow: var(--shadow);
+.thankyou-details {
+  margin-top: 1.5rem;
+}
+
+.thankyou-details p {
+  padding: 0.8rem 0;
+  margin: 0;
+  border-bottom: 1px solid #d0d7d6;
 }

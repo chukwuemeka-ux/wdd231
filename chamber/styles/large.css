@@ -127,9 +127,6 @@
   .spotlights { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .hero-content { position:absolute; left:2rem; bottom:2rem; max-width:520px; border-radius:.5rem; }
 }
-/* ========================================
-   WEEK 4 - DESKTOP JOIN PAGE
-   ======================================== */
 
 @media (min-width: 768px) {
 
@@ -139,7 +136,16 @@
     gap: 2rem;
   }
 
+  .join-form {
+    padding: 1.75rem;
+  }
+
   .membership-cards {
     grid-template-columns: 1fr;
+  }
+
+  .join-form input[type="submit"] {
+    width: auto;
+    justify-self: start;
   }
 }
