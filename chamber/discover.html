@@ -1,1 +1,57 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Discover Aba, Abia State."><meta name="author" content="Chukwuemeka Okpara Sunday"><title>Discover Aba | Chamber of Commerce</title><link rel="icon" href="images/favicon.svg"><link rel="stylesheet" href="styles/normalize.css"><link rel="stylesheet" href="styles/small.css"><link rel="stylesheet" href="styles/large.css"><script src="scripts/navigation.js" defer></script></head><body><header class="site-header"><a class="brand" href="index.html"><img src="images/chamber-logo.svg" alt="" width="52" height="52"><span><span class="brand-name">Aba Chamber of Commerce</span><span class="brand-tagline">Connect • Collaborate • Grow</span></span></a><button id="menu-button" class="menu-button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">☰</button><nav id="primary-nav" class="primary-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="directory.html">Directory</a><a href="join.html">Join</a><a href="discover.html" aria-current="page">Discover</a></nav></header><main><section class="page-heading"><h1>Discover Aba</h1><p>Explore the people, businesses, and opportunities that make Aba a vibrant commercial community.</p></section></main></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover places of interest in Aba and Abia State, Nigeria, with the Aba Chamber of Commerce.">
+  <meta name="author" content="Chukwuemeka Okpara Sunday">
+  <meta property="og:title" content="Discover Aba | Aba Chamber of Commerce">
+  <meta property="og:description" content="Explore notable markets, landmarks, culture and natural attractions in Aba and Abia State.">
+  <meta property="og:image" content="https://chukwuemeka-ux.github.io/wdd231/chamber/images/chamber-logo.svg">
+  <meta property="og:url" content="https://chukwuemeka-ux.github.io/wdd231/chamber/discover.html">
+  <meta property="og:type" content="website">
+  <title>Discover Aba and Abia State | Aba Chamber of Commerce</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <link rel="stylesheet" href="styles/discover.css">
+  <script src="scripts/navigation.js" defer></script>
+  <script type="module" src="scripts/discover.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Aba Chamber of Commerce home">
+      <img src="images/chamber-logo.svg" alt="" width="52" height="52">
+      <span><span class="brand-name">Aba Chamber of Commerce</span><span class="brand-tagline">Connect • Collaborate • Grow</span></span>
+    </a>
+    <button id="menu-button" class="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">☰</button>
+    <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a><a href="directory.html">Directory</a><a href="join.html">Join</a><a href="discover.html" aria-current="page">Discover</a>
+    </nav>
+  </header>
+  <main id="main-content">
+    <section class="page-heading">
+      <p class="eyebrow">Explore our community</p>
+      <h1>Discover Aba and Abia State</h1>
+      <p>From vibrant markets and sporting landmarks to cultural heritage and natural attractions, explore places that make our community distinctive.</p>
+    </section>
+    <aside class="visit-panel" aria-live="polite" aria-atomic="true">
+      <h2>Your Visit</h2><p id="visit-message">Checking your previous visit…</p>
+    </aside>
+    <section class="discover-grid" id="discover-grid" aria-label="Places of interest in Aba and Abia State">
+      <p>Loading places of interest…</p>
+    </section>
+    <noscript><p class="notice">Please enable JavaScript to view the places of interest.</p></noscript>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-contact"><h2>Aba Chamber of Commerce</h2><p>Aba, Abia State, Nigeria</p><p>Email: info@abachamber.example</p><p>Phone: +234 803 000 0000</p></div>
+    <div class="footer-development"><p>&copy; <span id="current-year"></span> Chukwuemeka Okpara Sunday</p><p>WDD 231 — Web Frontend Development I</p><p>Last modified: <span id="last-modified"></span></p></div>
+  </footer>
+  <script src="scripts/date.js" defer></script>
+</body>
+</html>
