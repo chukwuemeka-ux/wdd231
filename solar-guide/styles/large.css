@@ -1,0 +1,1 @@
+@media(min-width:1025px){.card-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.home-layout{display:grid;grid-template-columns:1.5fr 1fr;gap:1.5rem;align-items:start}.hero{padding:4rem}.site-header{padding-inline:max(4%,calc((100% - 1100px)/2))}}

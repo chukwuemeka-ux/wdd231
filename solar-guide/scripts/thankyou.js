@@ -1,0 +1,1 @@
+const params=new URLSearchParams(window.location.search);for(const key of ["name","email","interest","message","submitted"]){const target=document.querySelector(`[data-${key}]`);if(target)target.textContent=params.get(key)||"Not provided";}

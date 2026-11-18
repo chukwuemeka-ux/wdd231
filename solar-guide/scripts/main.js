@@ -1,0 +1,1 @@
+import {getPreference,savePreference} from "./storage.js";const year=document.querySelector("#year");if(year)year.textContent=new Date().getFullYear();const preference=document.querySelector("#topic-preference");if(preference){preference.value=getPreference()||"";preference.addEventListener("change",()=>savePreference(preference.value));}

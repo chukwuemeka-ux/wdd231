@@ -1,0 +1,1 @@
+const KEY="solar-guide-preference";export function savePreference(value){localStorage.setItem(KEY,value);}export function getPreference(){return localStorage.getItem(KEY);}

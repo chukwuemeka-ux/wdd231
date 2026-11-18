@@ -1,0 +1,15 @@
+
+:root{--green:#123b35;--gold:#f2b544;--paper:#f4f7f5;--ink:#263238;--muted:#5b6865}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+.skip-link{position:absolute;left:-9999px}.skip-link:focus{left:1rem;top:1rem;background:white;padding:.7rem;z-index:10}
+.site-header{background:var(--green);color:white;padding:1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{font-weight:800;text-decoration:none;font-size:1.1rem}.brand small{display:block;color:#e8d9b8;font-weight:400}
+.menu-button{background:transparent;color:white;border:1px solid #ffffff80;border-radius:.4rem;padding:.4rem .7rem}
+.primary-nav{display:none;position:absolute;top:76px;left:0;right:0;background:var(--green);padding:1rem;z-index:5}
+.primary-nav.open{display:grid;gap:.8rem}.primary-nav a{padding:.45rem;text-decoration:none;border-radius:.3rem}.primary-nav a[aria-current=page]{background:#ffffff20;border-bottom:3px solid var(--gold)}
+main{width:min(1100px,92%);margin:2rem auto;min-height:65vh}.hero{background:var(--green);color:white;padding:2rem;border-radius:1rem}.hero h1{font-size:clamp(2rem,7vw,3.5rem);line-height:1.1}.hero p{max-width:65ch}.eyebrow{color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.button,.primary-button{display:inline-block;background:var(--gold);color:#202820;text-decoration:none;border:0;border-radius:.4rem;padding:.7rem 1rem;font-weight:700;cursor:pointer}
+.section{margin:2rem 0}.card-grid{display:grid;grid-template-columns:1fr;gap:1rem}.card{background:white;border:1px solid #dce4df;border-radius:.7rem;padding:1rem;box-shadow:0 2px 8px #123b3510}.card h2,.card h3{color:var(--green)}.muted{color:var(--muted)}.site-footer{background:var(--green);color:white;padding:1.5rem;text-align:center}.site-footer a{color:#ffe1a0}
+form{display:grid;gap:1rem;max-width:650px}label{display:grid;gap:.3rem;font-weight:600}input,select,textarea{padding:.7rem;border:1px solid #71817b;border-radius:.35rem;background:white;color:var(--ink)}.status{padding:.7rem;background:#fff4d8;border-left:4px solid var(--gold)}
+dialog{border:0;border-radius:.7rem;max-width:min(90%,550px);padding:1.5rem;box-shadow:0 10px 40px #0005}dialog::backdrop{background:#10201dcc}.close-dialog{float:right}
+@media(min-width:641px){.menu-button{display:none}.primary-nav{display:flex;position:static;padding:0;background:transparent}.primary-nav a{padding:.5rem .8rem}.card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding:3rem}}

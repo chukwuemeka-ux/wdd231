@@ -1,0 +1,1 @@
+const form=document.querySelector("#enquiry-form");if(form){form.addEventListener("submit",()=>{const stamp=form.querySelector('[name="submitted"]');if(stamp)stamp.value=new Date().toISOString();});}

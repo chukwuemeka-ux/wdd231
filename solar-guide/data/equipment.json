@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Solar PV Module",
+    "category": "Generation",
+    "specification": "550 W monocrystalline",
+    "description": "Converts sunlight into direct-current electrical energy.",
+    "application": "Solar array"
+  },
+  {
+    "id": 2,
+    "name": "Hybrid Inverter",
+    "category": "Power conversion",
+    "specification": "5 kVA, 48 V",
+    "description": "Converts DC power to AC and manages grid, generator and battery sources.",
+    "application": "Home energy system"
+  },
+  {
+    "id": 3,
+    "name": "Lithium Battery",
+    "category": "Energy storage",
+    "specification": "5.12 kWh, 51.2 V",
+    "description": "Stores electrical energy for use when solar generation is low.",
+    "application": "Backup storage"
+  },
+  {
+    "id": 4,
+    "name": "MPPT Charge Controller",
+    "category": "Power regulation",
+    "specification": "100 A, model-dependent PV input",
+    "description": "Tracks the PV array operating point and regulates battery charging.",
+    "application": "Off-grid system"
+  },
+  {
+    "id": 5,
+    "name": "DC Isolator",
+    "category": "Protection",
+    "specification": "PV-rated DC switch",
+    "description": "Provides a means to isolate a DC circuit for safe maintenance.",
+    "application": "PV string isolation"
+  },
+  {
+    "id": 6,
+    "name": "AC Distribution Board",
+    "category": "Distribution",
+    "specification": "Rated to installation design",
+    "description": "Houses protective devices and distributes AC circuits.",
+    "application": "Building distribution"
+  },
+  {
+    "id": 7,
+    "name": "DC Circuit Breaker",
+    "category": "Protection",
+    "specification": "Voltage and current rating selected for circuit",
+    "description": "Protects suitable DC circuits against overcurrent.",
+    "application": "Battery and PV circuits"
+  },
+  {
+    "id": 8,
+    "name": "Surge Protection Device",
+    "category": "Protection",
+    "specification": "Type and rating selected by design",
+    "description": "Limits transient overvoltage effects on connected equipment.",
+    "application": "PV and AC protection"
+  },
+  {
+    "id": 9,
+    "name": "Solar Combiner Box",
+    "category": "Connection",
+    "specification": "String count and ratings vary",
+    "description": "Combines PV strings and may house string protection devices.",
+    "application": "Solar array collection"
+  },
+  {
+    "id": 10,
+    "name": "Energy Meter",
+    "category": "Monitoring",
+    "specification": "Single- or three-phase model",
+    "description": "Measures electrical energy and related operating parameters.",
+    "application": "Energy monitoring"
+  },
+  {
+    "id": 11,
+    "name": "Battery Management System",
+    "category": "Control",
+    "specification": "Compatible with battery chemistry and voltage",
+    "description": "Monitors battery cells and manages safe operating limits.",
+    "application": "Lithium battery pack"
+  },
+  {
+    "id": 12,
+    "name": "Earthing Electrode",
+    "category": "Safety",
+    "specification": "Selected to local code and soil conditions",
+    "description": "Forms part of the installation earthing arrangement.",
+    "application": "Electrical safety"
+  },
+  {
+    "id": 13,
+    "name": "PV Cable",
+    "category": "Cabling",
+    "specification": "UV-resistant, PV-rated cable",
+    "description": "Connects PV modules and array components with suitable DC cable.",
+    "application": "Solar DC wiring"
+  },
+  {
+    "id": 14,
+    "name": "MC4-Compatible Connector",
+    "category": "Connection",
+    "specification": "Must match cable and connector manufacturer",
+    "description": "Provides a compatible connection between PV cable sections.",
+    "application": "PV string connection"
+  },
+  {
+    "id": 15,
+    "name": "Pure Sine Wave Inverter",
+    "category": "Power conversion",
+    "specification": "Capacity selected from load assessment",
+    "description": "Supplies AC power with a sinusoidal output waveform.",
+    "application": "AC loads"
+  }
+]
