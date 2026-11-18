@@ -1,0 +1,23 @@
+/* Discover page: distinct named-area layouts for each viewport. */
+.visit-panel{margin:0 0 1.25rem;padding:1rem 1.2rem;background:#e5f2ef;border-left:5px solid #0f5f59;border-radius:.45rem}
+.visit-panel h2{font-size:1.05rem;margin:0 0 .25rem;color:#084c46}.visit-panel p{margin:0;color:#17212b}
+.discover-grid{display:grid;grid-template-areas:"one" "two" "three" "four" "five" "six" "seven" "eight";gap:1rem;padding:.5rem 0 2.5rem}
+.place-1{grid-area:one}.place-2{grid-area:two}.place-3{grid-area:three}.place-4{grid-area:four}.place-5{grid-area:five}.place-6{grid-area:six}.place-7{grid-area:seven}.place-8{grid-area:eight}
+.discover-card{min-width:0;display:flex;flex-direction:column;align-items:flex-start;background:#fff;border:1px solid #d5dfdc;border-radius:.65rem;overflow:hidden;box-shadow:0 5px 18px rgba(15,40,35,.09);padding:1rem;gap:.65rem}
+.discover-card h2{font-size:1.2rem;line-height:1.25;margin:0;color:#084c46}
+.discover-card figure{width:100%;margin:0;overflow:hidden;border-radius:.4rem;background:#e2e8f0}
+.discover-card img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+.discover-card address{font-style:normal;color:#475569;font-size:.92rem;font-weight:600}
+.discover-card p{margin:0;flex:1;color:#334155}
+.learn-more{margin-top:.25rem;border:0;border-radius:.35rem;background:#0f5f59;color:#fff;padding:.65rem 1rem;font:inherit;font-weight:700;cursor:pointer}
+.learn-more:hover,.learn-more:focus-visible{background:#084c46}
+@media (min-width:641px) and (max-width:1024px){
+ .discover-grid{grid-template-columns:repeat(6,minmax(0,1fr));grid-template-areas:"one one one two two two" "three three four four five five" "six six six seven seven seven" "eight eight eight eight eight eight";gap:1.15rem}
+ .discover-card{padding:.85rem}.place-8{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto 1fr auto;column-gap:1rem}.place-8 h2{grid-column:1/-1}.place-8 figure{grid-row:2/4}
+}
+@media (min-width:1025px){
+ .discover-grid{grid-template-columns:repeat(12,minmax(0,1fr));grid-template-areas:"one one one one two two two two three three three three" "four four four five five five six six six seven seven seven" "eight eight eight eight eight eight eight eight eight eight eight eight";gap:1.25rem}
+ .discover-card{padding:1.1rem}.place-8{display:grid;grid-template-columns:1.1fr 1fr 1.3fr auto;grid-template-rows:auto 1fr;align-items:center;column-gap:1.2rem}.place-8 h2{grid-column:1/-1}.place-8 figure{grid-row:2}.place-8 address{grid-column:2}.place-8 p{grid-column:3;grid-row:2}.place-8 button{grid-column:4;grid-row:2}
+ .discover-card img{transition:transform .25s ease,filter .25s ease}.discover-card figure:hover img{transform:scale(1.045);filter:saturate(1.08)}
+}
+@media (prefers-reduced-motion:reduce){.discover-card img{transition:none}}
